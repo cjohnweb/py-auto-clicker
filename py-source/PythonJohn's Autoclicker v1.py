@@ -6,13 +6,17 @@ import httplib, urllib
 
 
 def checkforupdates():
-  params = urllib.urlencode({'p': 'autoclicker', 'v': 1})
-  headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
-  http = httplib.HTTPConnection("pythonjohn.com", 80, timeout=5 )
-  http.request( "POST", "/checkforupdates.php", params, headers )
-  response = http.getresponse()
-  data = response.read()
-  http.close()
+  try:
+    params = urllib.urlencode({'p': 'autoclicker', 'v': 1})
+    headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
+    http = httplib.HTTPConnection("pythonjohn.com", 80, timeout=5 )
+    http.request( "POST", "/checkforupdates.php", params, headers )
+    response = http.getresponse()
+    data = response.read()
+    http.close()
+  except Exception, e:
+    data = "We could not reach the server, check your internet connection or firewall."
+
   return data
 
 def click(x,y):
