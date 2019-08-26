@@ -3,29 +3,20 @@
 Written By John Minton <cjohnweb@gmail.com>
 http://pythonjohn.com/
 
-===
-DESCRIPTION & USE
-===
+## DESCRIPTION & USE
 
 
 Auto-clicker program written in Python 2.7 for use on Windows OS.
 
 When you hold the LEFT CTRL key your mouse will rapidly left click your mouse. Press RIGHT CTRL to quit program.
 
-
-===
-CHANGE LOG AND BUG FIXES
-===
+## CHANGE LOG AND BUG FIXES
 
 04/04/2016 Program crashes if internet is not available when the program starts and looks for updates online. An 
 	exception was placed around the http lib in the SOURCE CODE (Still need to re-compile). If internet is not
 	present the program should not crash and continue as expected.
 
-
-
-===
-LICENSE
-===
+## LICENSE
 
 Licensed under GNU General Public License, version 3 (GPL-3.0)
 See License Details at https://opensource.org/licenses/GPL-3.0
